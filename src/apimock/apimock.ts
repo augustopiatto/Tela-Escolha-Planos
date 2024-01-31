@@ -3,7 +3,7 @@ import { PlansAPIType } from "../helpers/types/types";
 const plans: PlansAPIType[] = [
   {
     id: 1,
-    type: "Light",
+    type: "light",
     description: "Indicado para quem busca informações isentas sobre insumos",
     price: { month: 59, year: 490 },
     infos: [
@@ -58,7 +58,7 @@ const plans: PlansAPIType[] = [
   },
   {
     id: 2,
-    type: "Pro",
+    type: "pro",
     description: "Indicado para quem quer diminuir custo na compra de insumos",
     price: { month: 490, year: 4990 },
     infos: [
@@ -112,7 +112,7 @@ const plans: PlansAPIType[] = [
   },
   {
     id: 3,
-    type: "Full",
+    type: "full",
     // Essa descrição está igual a do plano Light, avisar quando mandar e-mail
     description: "Indicado para quem busca informações isentas sobre insumos",
     price: { month: 4990, year: 4.9 },
