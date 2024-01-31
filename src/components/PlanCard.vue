@@ -36,7 +36,7 @@ const chipVariant = computed(() => {
       <!-- fazer um helper para valores em dinheiro -->
       <h1 class="pc-price-month">R${{ plan.price.month }}<span class="pcpm-unit">/mês</span></h1>
       <h2 class="pc-price-year">R${{ plan.price.year }}<span class="pcpy-unit">/ano</span></h2>
-      <div v-for="benefit in plan.infos">
+      <div v-for="benefit in plan.infos" class="pc-benefits">
         <PlanCardBenefit :benefit="benefit" :key="benefit.id" />
       </div>
       <p class="pc-observation">
@@ -89,7 +89,7 @@ const chipVariant = computed(() => {
   font-weight: 700;
   line-height: 16px;
   color: #16113E;
-  margin-bottom: 24px;
+  margin-bottom: 10px;
 }
 
 .pcpm-unit {
@@ -104,6 +104,10 @@ const chipVariant = computed(() => {
   font-weight: 500;
   color: #666384;
   margin-left: 4px;
+}
+
+.pc-benefits {
+  margin-top: 14px;
 }
 
 .pc-observation {
