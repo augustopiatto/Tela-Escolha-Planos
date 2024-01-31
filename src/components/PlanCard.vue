@@ -17,7 +17,7 @@ function formatedText(text: string) {
 </script>
 
 <template>
-  <v-card variant="flat" max-width="260" class="plan-card">
+  <v-card variant="flat" max-width="260" hover class="plan-card">
     <v-card-item>
       <v-card-title class="pc-title">
         <img :src="leaf" alt="digifarmz-leaf" class="pct-digifarmz-icon" />
@@ -85,6 +85,9 @@ function formatedText(text: string) {
   background: linear-gradient(to right, green, rgb(175, 144, 22));
 }
 .plan-card {
+  // hover do v-card muda pra pointer, o que pode confundir usuário
+  cursor: auto;
+
   .pc-title {
     display: flex;
     align-items: center;
@@ -175,6 +178,7 @@ function formatedText(text: string) {
 
   .pc-actions {
     padding: 0 16px;
+    margin-bottom: 12px;
 
     .pca-button {
       text-transform: initial;
