@@ -13,20 +13,20 @@ const props = defineProps<{ benefit: PlansAPIInfosType }>()
   </div>
 </template>
 
-<style scoped>
-.plan-card-benefit-included {}
-
-.pcbi-text {
-  font-size: 14px;
-  color: #211C48;
-  margin-left: 10px;
+<style scoped lang="scss">
+.plan-card-benefit-included {
+  .pcbi-text {
+    font-size: 14px;
+    color: #211C48;
+    margin-left: 10px;
+  }
 }
 
-.plan-card-benefit-not-included {}
-
-.pcbni-text {
-  font-size: 14px;
-  color: #757575;
-  margin-left: 10px;
+.plan-card-benefit-not-included {
+  .pcbni-text {
+    font-size: 14px;
+    color: #757575;
+    margin-left: 10px;
+  }
 }
 </style>

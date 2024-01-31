@@ -12,7 +12,7 @@ import PlanCard from './components/PlanCard.vue'
   </div>
 </template>
 
-<style scoped>
+<style scoped lang="scss">
 .app {
   padding: 64px 0;
   margin: 0 auto;

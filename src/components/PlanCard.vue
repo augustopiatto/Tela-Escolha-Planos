@@ -24,7 +24,7 @@ const chipVariant = computed(() => {
   <v-card class="plan-card">
     <v-card-item>
       <v-card-title class="pc-title">
-        <img :src="leaf" alt="digifarmz-leaf" class="digifarmz-icon" />
+        <img :src="leaf" alt="digifarmz-leaf" class="pct-digifarmz-icon" />
         <v-divider vertical length="10px" role="presentation" class="pct-divider"></v-divider>
         <v-chip :variant="chipVariant" size="small" density="comfortable" class="pct-text">{{ plan.type }}</v-chip>
       </v-card-title>
@@ -49,62 +49,66 @@ const chipVariant = computed(() => {
   </v-card>
 </template>
 
-<style scoped>
-.plan-card {}
+<style scoped lang="scss">
+.plan-card {
+  .pc-title {
+    display: flex;
+    align-items: center;
+    gap: 8px;
 
-.pc-title {
-  display: flex;
-  align-items: center;
-  gap: 8px;
+    .pct-digifarmz-icon {
+      height: 24px;
+      width: auto;
+      margin: auto 0px;
+    }
+
+    .pct-text {
+      font-size: 11px;
+      font-weight: bold;
+    }
+  }
+
+  .pc-subtitle {
+    font-size: 12px;
+    color: #646183;
+    text-wrap: wrap;
+    margin-top: 20px;
+  }
+
+  .pc-price-month {
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 40px;
+    color: #16113E;
+    margin-top: 26px;
+    .pcpm-unit {
+      font-size: 16px;
+      font-weight: 500;
+      color: #666384;
+      margin-left: 4px;
+    }
+  }
+  
+  .pc-price-year {
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 16px;
+    color: #16113E;
+    margin-bottom: 10px;
+    .pcpy-unit {
+      font-size: 12px;
+      font-weight: 500;
+      color: #666384;
+      margin-left: 4px;
+    }
+  }
 }
 
-.digifarmz-icon {
-  height: 24px;
-  width: auto;
-  margin: auto 0px;
-}
 
-.pct-text {
-  font-size: 11px;
-  font-weight: bold;
-}
 
-.pc-subtitle {
-  font-size: 12px;
-  color: #646183;
-  text-wrap: wrap;
-  margin-top: 20px;
-}
 
-.pc-price-month {
-  font-size: 36px;
-  font-weight: 700;
-  line-height: 40px;
-  color: #16113E;
-  margin-top: 26px;
-}
 
-.pc-price-year {
-  font-size: 14px;
-  font-weight: 700;
-  line-height: 16px;
-  color: #16113E;
-  margin-bottom: 10px;
-}
 
-.pcpm-unit {
-  font-size: 16px;
-  font-weight: 500;
-  color: #666384;
-  margin-left: 4px;
-}
-
-.pcpy-unit {
-  font-size: 12px;
-  font-weight: 500;
-  color: #666384;
-  margin-left: 4px;
-}
 
 .pc-benefits {
   margin-top: 14px;
