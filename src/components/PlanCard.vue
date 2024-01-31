@@ -6,7 +6,7 @@ defineProps<{ plan: PlansAPIType }>()
 </script>
 
 <template>
-  {{ plan }}
+  <v-card :text="plan.type"></v-card>
 </template>
 
 <style scoped>
