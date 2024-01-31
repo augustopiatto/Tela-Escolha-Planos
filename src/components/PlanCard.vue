@@ -34,12 +34,12 @@ const chipVariant = computed(() => {
     </v-card-item>
     <v-card-text>
       <!-- fazer um helper para valores em dinheiro -->
-      <h1>R${{ plan.price.month }}/mês</h1>
-      <h2>R${{ plan.price.year }}/ano</h2>
+      <h1 class="pc-price-month">R${{ plan.price.month }}<span class="pcpm-unit">/mês</span></h1>
+      <h2 class="pc-price-year">R${{ plan.price.year }}<span class="pcpy-unit">/ano</span></h2>
       <div v-for="benefit in plan.infos">
         <PlanCardBenefit :benefit="benefit" :key="benefit.id" />
       </div>
-      <p class="">
+      <p class="pc-observation">
         {{ plan.observation }}
       </p>
     </v-card-text>
@@ -58,6 +58,12 @@ const chipVariant = computed(() => {
   gap: 8px;
 }
 
+.digifarmz-icon {
+  height: 24px;
+  width: auto;
+  margin: auto 0px;
+}
+
 .pct-text {
   font-size: 11px;
   font-weight: bold;
@@ -70,9 +76,42 @@ const chipVariant = computed(() => {
   margin-top: 20px;
 }
 
-.digifarmz-icon {
-  height: 24px;
-  width: auto;
-  margin: auto 0px;
+.pc-price-month {
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 40px;
+  color: #16113E;
+  margin-top: 26px;
 }
+
+.pc-price-year {
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 16px;
+  color: #16113E;
+  margin-bottom: 24px;
+}
+
+.pcpm-unit {
+  font-size: 16px;
+  font-weight: 500;
+  color: #666384;
+  margin-left: 4px;
+}
+
+.pcpy-unit {
+  font-size: 12px;
+  font-weight: 500;
+  color: #666384;
+  margin-left: 4px;
+}
+
+.pc-observation {
+  margin-top: 24px;
+  font-size: 10px;
+  font-weight: 500;
+  line-height: 12px;
+  color: #8C8AA3;
+}
+
 </style>

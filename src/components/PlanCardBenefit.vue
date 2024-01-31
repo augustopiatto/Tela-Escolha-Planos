@@ -7,10 +7,12 @@ defineProps<{ benefit: PlansAPIInfosType }>()
 </script>
 
 <template>
-  <div class="plan-card-beneftis">
+  <div class="plan-card-benefits">
     icone - {{ benefit.text }}
   </div>
 </template>
 
 <style scoped>
+.plan-card-benefits {
+}
 </style>
