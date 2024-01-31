@@ -40,9 +40,9 @@ O projeto possui as seguintes funcionalidades:
 
 O projeto inclui os seguintes scripts:
 
-`npm run dev`: Inicia o servidor de desenvolvimento
-`npm run build`: Builda o aplicativo pronto para produção
-`npm run cz`: Commita no padrão de "conventional commits"
+- `npm run dev`: Inicia o servidor de desenvolvimento
+- `npm run build`: Builda o aplicativo pronto para produção
+- `npm run cz`: Commita no padrão de "conventional commits"
 
 # Decisões técnicas
 
