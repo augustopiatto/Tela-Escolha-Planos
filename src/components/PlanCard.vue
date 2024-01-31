@@ -3,6 +3,7 @@ import { PlansAPIType } from '../helpers/types/types';
 import PlanCardBenefit from './PlanCardBenefit.vue';
 import leaf from '../assets/svg/digi-farmz-leaf.svg'
 import { computed } from 'vue'
+import { convertMoney } from '../helpers/functions/helpers.ts'
 
 const props = defineProps<{ plan: PlansAPIType }>()
 
@@ -37,10 +38,13 @@ function formatedText(text: string) {
         <p class="pc-subtitle" v-html="formatedText(plan.description)"></p>
       </v-card-subtitle>
     </v-card-item>
-    <v-card-text>
-      <!-- fazer um helper para valores em dinheiro -->
-      <h1 class="pc-price-month">R${{ plan.price.month }}<span class="pcpm-unit">/mês</span></h1>
-      <h2 class="pc-price-year">R${{ plan.price.year }}<span class="pcpy-unit">/ano</span></h2>
+    <v-card-text class="pc-card-text">
+      <h1 v-if="plan.type === 'Full'" class="pcct-price-year">{{ convertMoney(plan.price.month) }} +</h1>
+      <h1 v-else class="pcct-price-month">{{ convertMoney(plan.price.month) }}<span v-if="plan.type !== 'Full'"
+          class="pcctpm-unit">/mês</span><span v-else>+</span></h1>
+      <h2 v-if="plan.type === 'Full'" class="pcct-price-month">{{ convertMoney(plan.price.year) }}<span
+          class="pcctpm-unit">/ha por ano</span></h2>
+      <h2 v-else class="pcct-price-year">{{ convertMoney(plan.price.year) }}<span class="pcctpy-unit">/ano</span></h2>
       <div v-for="benefit in plan.infos" class="pc-benefits">
         <PlanCardBenefit :benefit="benefit" :key="benefit.id" />
       </div>
@@ -88,33 +92,39 @@ function formatedText(text: string) {
     }
   }
 
-  .pc-price-month {
-    font-size: 36px;
-    font-weight: 900;
-    line-height: 40px;
-    color: #16113E;
-    margin-top: 14px;
-  
-    .pcpm-unit {
-      font-size: 16px;
-      font-weight: 500;
-      color: #666384;
-      margin-left: 4px;
-    }
-  }
-  
-  .pc-price-year {
-    font-size: 14px;
-    font-weight: 700;
-    line-height: 16px;
-    color: #16113E;
-    margin-bottom: 24px;
+  .pc-card-text {
+    margin-top: 14px 0px 24px 0px;
 
-    .pcpy-unit {
-      font-size: 12px;
-      font-weight: 500;
-      color: #666384;
-      margin-left: 4px;
+    .pcct-price-month {
+      font-size: 36px;
+      font-weight: 900;
+      line-height: 40px;
+      color: #16113E;
+      display: flex;
+      align-items: center;
+
+      .pcctpm-unit {
+        font-size: 16px;
+        font-weight: 500;
+        color: #666384;
+        margin-left: 4px;
+      }
+    }
+
+    .pcct-price-year {
+      font-size: 14px;
+      font-weight: 700;
+      line-height: 16px;
+      color: #16113E;
+      display: flex;
+      align-items: center;
+
+      .pcctpy-unit {
+        font-size: 12px;
+        font-weight: 500;
+        color: #666384;
+        margin-left: 4px;
+      }
     }
   }
 
