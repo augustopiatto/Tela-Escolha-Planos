@@ -1,18 +1,58 @@
-# Vue 3 + TypeScript + Vite
+# Tela de Escolha de Planos
 
-This template should help get you started developing with Vue 3 and TypeScript in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
+## Visão Geral do Projeto
 
-## Recommended IDE Setup
+Utiliza Vue, Typescript, Vite, Vuetify e SASS.
+Exibe uma tela que permite ao usuário ver e escolher o produto desejo.
 
-- [VS Code](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin).
+## Preview
 
-## Type Support For `.vue` Imports in TS
+O objetivo é exibir as informações de maneira clara, e apresentar um design compatível com o Figma e responsivo ao usuário.
 
-TypeScript cannot handle type information for `.vue` imports by default, so we replace the `tsc` CLI with `vue-tsc` for type checking. In editors, we need [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin) to make the TypeScript language service aware of `.vue` types.
+## Começando
 
-If the standalone TypeScript plugin doesn't feel fast enough to you, Volar has also implemented a [Take Over Mode](https://github.com/johnsoncodehk/volar/discussions/471#discussioncomment-1361669) that is more performant. You can enable it by the following steps:
+Para iniciar o projeto, siga os passos abaixo:
 
-1. Disable the built-in TypeScript Extension
-   1. Run `Extensions: Show Built-in Extensions` from VSCode's command palette
-   2. Find `TypeScript and JavaScript Language Features`, right click and select `Disable (Workspace)`
-2. Reload the VSCode window by running `Developer: Reload Window` from the command palette.
+- Clone o repositório em sua máquina local.
+- Acesse a pasta do projeto e rode o comando `npm install`.
+- Rode o comando `npm run dev`
+
+## Tecnologias e Funcionalidades
+
+### Tecnologias
+
+O projeto inclui as seguintes tecnologias:
+
+- Vue para construção de componentes reativos
+- TypeScript para desenvolvimento, escalabilidade e segurança de tipo
+- Vite para desenvolvimento e construção rápidos e eficientes
+- Vuetify para estilização de UI
+- SASS para estruturação do CSS
+
+### Funcionalidades
+
+O projeto possui as seguintes funcionalidades:
+
+- Apresentar 3 diferentes planos
+- Permitir que o usuário interaja com a tela e tenha uma resposta
+
+## Scripts
+
+O projeto inclui os seguintes scripts:
+
+npm run dev: Inicia o servidor de desenvolvimento
+npm run build: Builda o aplicativo pronto para produção
+npm run lint: Linta e corrige os arquivos
+npm run cz: Commita no padrão de "conventional commits"
+
+# Decisões técnicas
+
+## Tecnologias
+
+- Vue permite a criação de código e componentes reativos de maneira ágil.
+- Vuetify agiliza a criação de tela devido à componentes já prontos e documentação bem estruturada.
+- Uso de TypeScript no front end é a melhor maneira de assegurar que o desenvolvedor não gere bugs e esteja sempre ciente das mudanças que está causando.
+
+## Melhorias futuras
+
+- Aplicar testes de renderização nos componentes
