@@ -8,11 +8,10 @@ defineProps<{ benefit: PlansAPIInfosType }>()
 
 <template>
   <div class="plan-card-benefits">
-    icone - {{ benefit.text }}
+    <v-icon icon="mdi-check-circle" color="success"></v-icon><span>{{ benefit.text }}</span>
   </div>
 </template>
 
 <style scoped>
-.plan-card-benefits {
-}
+.plan-card-benefits {}
 </style>

@@ -40,7 +40,7 @@ const chipVariant = computed(() => {
         <PlanCardBenefit :benefit="benefit" :key="benefit.id" />
       </div>
       <p class="pc-observation">
-        {{ plan.observation }}
+        * {{ plan.observation }}
       </p>
     </v-card-text>
     <v-card-actions>
@@ -113,5 +113,4 @@ const chipVariant = computed(() => {
   line-height: 12px;
   color: #8C8AA3;
 }
-
 </style>
