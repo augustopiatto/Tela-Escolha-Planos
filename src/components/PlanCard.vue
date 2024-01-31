@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { PlansAPIType } from '../helpers/types/types';
 import PlanCardBenefit from './PlanCardBenefit.vue';
-import leaf from '../assets/svg/digi-farmz-leaf.svg'
+import leaf from '../assets/svg/digifarmz-leaf.svg'
 import { computed } from 'vue'
 import { convertMoney } from '../helpers/functions/helpers.ts'
 
@@ -46,7 +46,33 @@ function formatedText(text: string) {
       </p>
     </v-card-text>
     <v-card-actions class="pc-actions">
-      <v-btn color="success" variant="flat" class="pca-button">Solicitar plano</v-btn>
+      <v-dialog width="500">
+        <template v-slot:activator="{ props }">
+          <v-btn v-bind="props" color="success" variant="flat" class="pca-button">Solicitar plano</v-btn>
+        </template>
+        <template v-slot:default="{ isActive }">
+          <v-card title="Parabéns!">
+            <v-card-text>
+              Você irá adquirir um excelento produto. Siga para a tela de pagamento
+            </v-card-text>
+            <v-card-actions>
+              <v-spacer></v-spacer>
+              <v-btn
+                text="Fechar"
+                class="text-none"
+                @click="isActive.value = false"
+              ></v-btn>
+              <v-btn
+                text="Continuar"
+                class="text-none"
+                color="success"
+                variant="flat"
+                @click="isActive.value = false"
+              ></v-btn>
+            </v-card-actions>
+          </v-card>
+        </template>
+      </v-dialog>
     </v-card-actions>
   </v-card>
 </template>
