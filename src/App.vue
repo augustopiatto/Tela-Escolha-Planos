@@ -5,11 +5,11 @@ import PlanCard from './components/PlanCard.vue'
 </script>
 
 <template>
-  <div class="app">
-    <div v-for="plan in plans">
+  <v-row class="app">
+    <v-col v-for="plan in plans" md="3">
       <PlanCard :plan="plan" :key="plan.id" />
-    </div>
-  </div>
+    </v-col>
+  </v-row>
 </template>
 
 <style scoped lang="scss">

@@ -159,7 +159,6 @@ function formatedText(text: string) {
         }
       }
     }
-
   }
 
   .pc-benefits {
