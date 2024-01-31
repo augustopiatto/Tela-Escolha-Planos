@@ -59,7 +59,7 @@ const plans: PlansAPIType[] = [
   {
     id: 2,
     type: "Pro",
-    description: "Indicado para quem quer diminuircusto na compra de insumos",
+    description: "Indicado para quem quer diminuir custo na compra de insumos",
     price: { month: 490, year: 4990 },
     infos: [
       {
