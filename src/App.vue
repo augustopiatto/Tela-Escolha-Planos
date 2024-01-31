@@ -16,5 +16,9 @@ import PlanCard from './components/PlanCard.vue'
 .app {
   padding: 64px 0;
   margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  gap: 64px;
+  max-width: 70%;
 }
 </style>

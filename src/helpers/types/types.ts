@@ -18,4 +18,4 @@ type PlansAPIType = {
   observation: string;
 };
 
-export type { PlansAPIType }
+export type { PlansAPIType, PlansAPIInfosType }
